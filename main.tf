@@ -2,11 +2,11 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.16"
+      version = "~> 5.60.0"
     }
   }
 
-  required_version = ">= 1.2.0"
+  required_version = ">= 1.9.0"
 }
 
 provider "aws" {
@@ -14,11 +14,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-830c94e3"
+  ami           = "ami-05134c8ef96964280"
   instance_type = "t2.micro"
 
   tags = {
-    Name = "ExampleAppServerInstance"
-    TED = "DRIFTCHECK"
+    Name = "Handson_SERVER_NAME"
+    TED = "20240829_Handson"
   }
 }
